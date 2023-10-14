@@ -1,7 +1,15 @@
 import Button from "@/components/button";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useState,useEffect } from "react";
 export default function Page({ data }) {
 const [count,setCount] = useState(0);
+const router = useRouter();
+
+console.log("routing",router)
+useEffect(() => {
+console.log("HEYEYEEY")
+},[count])
+
 console.log("dhdhdhd",data)
     return (
         <div><Button/>{count}
@@ -17,6 +25,7 @@ console.log("dhdhdhd",data)
     // Fetch data from external API
     const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
     const data = await res.json()
+    console.log(data)
    
     // Pass data to the page via props
     return { props: { data } }
