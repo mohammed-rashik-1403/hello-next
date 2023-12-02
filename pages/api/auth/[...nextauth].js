@@ -111,7 +111,7 @@ export const authOptions = {
         httpOnly: true,
         sameSite: 'none',
         path: '/',
-        secure: false,
+        secure: true,
         domain: '.d3jsaq6594du80.cloudfront.net'
       }
     },
