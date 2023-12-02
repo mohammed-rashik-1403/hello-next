@@ -51,7 +51,7 @@ export default function Home(props) {
   onClick={() => {
     signIn(
       'cognito',
-      { callbackUrl: '/india/australia' },
+      { callbackUrl: '/' },
       // { prompt: 'login' },
     );
   }}
