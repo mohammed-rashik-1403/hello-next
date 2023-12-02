@@ -109,9 +109,9 @@ export const authOptions = {
       name: `next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
-        secure: true,
+        secure: false,
         domain: '.d3jsaq6594du80.cloudfront.net'
       }
     },
