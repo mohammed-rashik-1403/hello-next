@@ -73,6 +73,7 @@ export const authOptions = {
       return session;
     },
   async redirect({ url, baseUrl }) {
+    return baseUrl;
     console.log("toppppppppppppppp",url)
     console.log("topppppppppbaseeeeeeee",baseUrl)
     url = `/india/student-essentials/?asm=true`;
