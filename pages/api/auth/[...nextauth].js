@@ -79,7 +79,7 @@ export const authOptions = {
     // baseUrl = ``
     console.log("newwwwurl",url)
     console.log("newwwbaseUrlwurl",baseUrl)
-    return baseUrl
+    return url
     return url.startsWith(baseUrl) ? url : baseUrl+'/india';
     // return `http://localhost:3005/india/student-essentials/?asm=true`;
     // Allows relative callback URLs
@@ -111,7 +111,7 @@ export const authOptions = {
         httpOnly: true,
         sameSite: 'none',
         path: '/',
-        secure: false,
+        secure: true,
         domain: '.d3jsaq6594du80.cloudfront.net'
       }
     },
