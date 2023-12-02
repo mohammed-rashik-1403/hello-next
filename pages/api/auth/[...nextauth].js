@@ -72,34 +72,34 @@ export const authOptions = {
       }
       return session;
     },
-  async redirect({ url, baseUrl }) {
-    return url;
-    console.log("toppppppppppppppp",url)
-    console.log("topppppppppbaseeeeeeee",baseUrl)
-    url = `/india/student-essentials/?asm=true`;
-    // baseUrl = ``
-    console.log("newwwwurl",url)
-    console.log("newwwbaseUrlwurl",baseUrl)
-    return url
-    return url.startsWith(baseUrl) ? url : baseUrl+'/india';
-    // return `http://localhost:3005/india/student-essentials/?asm=true`;
-    // Allows relative callback URLs
-    if (url.startsWith("/")){
-      console.log("first con22",`${baseUrl}${url}`)
-      return `${baseUrl}${url}`
-    } 
-    // Allows callback URLs on the same origin
-    else if (new URL(url).origin === baseUrl){
-      console.log("second con222",`${baseUrl}${url}`)
-      return url
-    } else{
-      console.log("lasttttttt")
-      // return `http://localhost:3005/india/student-essentials/?asm=true`;
-      return baseUrl
-    }
+  // async redirect({ url, baseUrl }) {
+  //   return url;
+  //   console.log("toppppppppppppppp",url)
+  //   console.log("topppppppppbaseeeeeeee",baseUrl)
+  //   url = `/india/student-essentials/?asm=true`;
+  //   // baseUrl = ``
+  //   console.log("newwwwurl",url)
+  //   console.log("newwwbaseUrlwurl",baseUrl)
+  //   return url
+  //   return url.startsWith(baseUrl) ? url : baseUrl+'/india';
+  //   // return `http://localhost:3005/india/student-essentials/?asm=true`;
+  //   // Allows relative callback URLs
+  //   if (url.startsWith("/")){
+  //     console.log("first con22",`${baseUrl}${url}`)
+  //     return `${baseUrl}${url}`
+  //   } 
+  //   // Allows callback URLs on the same origin
+  //   else if (new URL(url).origin === baseUrl){
+  //     console.log("second con222",`${baseUrl}${url}`)
+  //     return url
+  //   } else{
+  //     console.log("lasttttttt")
+  //     // return `http://localhost:3005/india/student-essentials/?asm=true`;
+  //     return baseUrl
+  //   }
     
-    return `https://d3jsaq6594du80.cloudfront.net/india/student-essentials`;
-  },
+  //   return `https://d3jsaq6594du80.cloudfront.net/india/student-essentials`;
+  // },
    
   },
   session: {
