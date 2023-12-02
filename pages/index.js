@@ -47,6 +47,17 @@ export default function Home(props) {
 >
   GITHUB LOGIN in
 </button>
+       <button
+  onClick={() => {
+    signIn(
+      'cognito',
+      { callbackUrl: '/india/australia' },
+      // { prompt: 'login' },
+    );
+  }}
+>
+  Cog Log in
+</button>
          </div>
       </main>
     </>
