@@ -112,7 +112,7 @@ export const authOptions = {
         httpOnly: true,
         sameSite: "none",
         path: "/",
-        secure: true,
+        secure: false,
         domain: '.hello-next-lime-kappa.vercel.app'
       }
     },
