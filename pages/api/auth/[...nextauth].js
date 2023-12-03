@@ -33,7 +33,7 @@ export const authOptions = {
     }),
     
   ],
-  secret: process.env.SECRET,
+  secret: `wfgGDD+uI/mjmskZO1cX/iUA1OLoHXOgaoU8hn7AxKc=`,
   callbacks: {
     async jwt({ token, user, account }) {
        console.log("tokeeeeeeeeeeeeeeeeee",token)
