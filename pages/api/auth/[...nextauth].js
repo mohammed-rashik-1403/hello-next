@@ -12,7 +12,7 @@ export const authOptions = {
       clientId: `241g55s6j05sqhc60pfv57if7t`,
       clientSecret: null,
       issuer: `https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_JtDXYUi6b`,
-      idToken: true,
+     // idToken: true,
       client: {
         token_endpoint_auth_method: "none"
       },
