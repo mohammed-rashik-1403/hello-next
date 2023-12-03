@@ -112,7 +112,7 @@ export const authOptions = {
         sameSite: "none",
         path: "/",
         secure: true,
-        domain: '.d3jsaq6594du80.cloudfront.net'
+        domain: '.hello-next-lime-kappa.vercel.app'
       }
     },
     callbackUrl: {
