@@ -56,7 +56,7 @@ export default function Home(props) {
     );
   }}
 >
-  Cog Log in1.6
+  Cog Log in1.7
 </button>
          </div>
       </main>
