@@ -32,7 +32,7 @@ export const authOptions = {
     }),
     
   ],
-  secret : "qJ8Zg4buf9bFLO2knTn40Tnqatfdm1BNVRQ0GFXCX6w=",
+  
   callbacks: {
     async jwt({ token, user, account }) {
        console.log("tokeeeeeeeeeeeeeeeeee",token)
