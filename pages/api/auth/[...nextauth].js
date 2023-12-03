@@ -16,7 +16,7 @@ export const authOptions = {
       client: {
         token_endpoint_auth_method: "none"
       },
-        checks: ['nonce','pkce','none','state'],
+        checks: ["nonce","session-token"],
      
     
     }),
@@ -72,34 +72,33 @@ export const authOptions = {
       }
       return session;
     },
-   async redirect({ url, baseUrl }) {
-   //  return url;
-   console.log("toppppppppppppppp",url)
-   console.log("topppppppppbaseeeeeeee",baseUrl)
-   url = `/india/student-essentials/?asm=true`;
+  async redirect({ url, baseUrl }) {
+    return baseUrl;
+    console.log("toppppppppppppppp",url)
+    console.log("topppppppppbaseeeeeeee",baseUrl)
+    url = `/india/student-essentials/?asm=true`;
     // baseUrl = ``
     console.log("newwwwurl",url)
-     console.log("newwwbaseUrlwurl",baseUrl)
-    // return url
+    console.log("newwwbaseUrlwurl",baseUrl)
     return url.startsWith(baseUrl) ? url : baseUrl+'/india';
-     // return `http://localhost:3005/india/student-essentials/?asm=true`;
+    // return `http://localhost:3005/india/student-essentials/?asm=true`;
     // Allows relative callback URLs
-     if (url.startsWith("/")){
-       console.log("first con22",`${baseUrl}${url}`)
-     return `${baseUrl}${url}`
-     } 
-     // Allows callback URLs on the same origin
-     else if (new URL(url).origin === baseUrl){
-       console.log("second con222",`${baseUrl}${url}`)
+    if (url.startsWith("/")){
+      console.log("first con22",`${baseUrl}${url}`)
+      return `${baseUrl}${url}`
+    } 
+    // Allows callback URLs on the same origin
+    else if (new URL(url).origin === baseUrl){
+      console.log("second con222",`${baseUrl}${url}`)
       return url
-     } else{
-       console.log("lasttttttt")
-       // return `http://localhost:3005/india/student-essentials/?asm=true`;
-       return baseUrl
-     }
+    } else{
+      console.log("lasttttttt")
+      // return `http://localhost:3005/india/student-essentials/?asm=true`;
+      return baseUrl
+    }
     
-     return `https://d3jsaq6594du80.cloudfront.net/india/student-essentials`;
-   },
+    return `https://d3jsaq6594du80.cloudfront.net/india/student-essentials`;
+  },
    
   },
   session: {
@@ -110,8 +109,8 @@ export const authOptions = {
       name: `next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'none',
-        path: '/',
+        sameSite: "none",
+        path: "/",
         secure: true,
         domain: '.d3jsaq6594du80.cloudfront.net'
       }
@@ -126,7 +125,7 @@ export const authOptions = {
       }
     },
     csrfToken: {
-      name: 'ssnext-auth.csrf-token',
+      name: 'next-auth.csrf-token',
       options: {
         httpOnly: true,
         sameSite: 'none',
