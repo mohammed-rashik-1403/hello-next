@@ -1,8 +1,7 @@
-
-4.41 KiB
 import NextAuth from 'next-auth';
 import AzureADProvider from 'next-auth/providers/azure-ad';
 import CognitoProvider from 'next-auth/providers/cognito';
+
 /*
 Counsellor SSO login config file
 NextAuth with AzureADProvider
@@ -33,7 +32,7 @@ export const authOptions = {
     }),
     
   ],
-  secret: `wfgGDD+uI/mjmskZO1cX/iUA1OLoHXOgaoU8hn7AxKc=`,
+  secret : "qJ8Zg4buf9bFLO2knTn40Tnqatfdm1BNVRQ0GFXCX6w=",
   callbacks: {
     async jwt({ token, user, account }) {
        console.log("tokeeeeeeeeeeeeeeeeee",token)
@@ -165,4 +164,5 @@ export const authOptions = {
   
  
 };
+
 export default NextAuth(authOptions);
